@@ -1,0 +1,84 @@
+type Stake_AdminUnlocked {
+  id: ID!
+  adminUnlocked: Boolean!
+}
+
+type Stake_AutoRenew {
+  id: ID!
+  user: String!
+  event_id: BigInt!
+  autoRenew: Boolean!
+}
+
+type Stake_DelegateChanged {
+  id: ID!
+  delegator: String!
+  fromDelegate: String!
+  toDelegate: String!
+}
+
+type Stake_DelegateVotesChanged {
+  id: ID!
+  delegate: String!
+  previousVotes: BigInt!
+  newVotes: BigInt!
+}
+
+type Stake_EIP712DomainChanged {
+  id: ID!
+}
+
+type Stake_Extend {
+  id: ID!
+  user: String!
+  event_id: BigInt!
+  numWeeks: BigInt!
+}
+
+type Stake_Initialized {
+  id: ID!
+  version: BigInt!
+}
+
+type Stake_MaxWeeksSet {
+  id: ID!
+  newMaxWeeks: BigInt!
+  oldMaxWeeks: BigInt!
+}
+
+type Stake_RoleAdminChanged {
+  id: ID!
+  role: String!
+  previousAdminRole: String!
+  newAdminRole: String!
+}
+
+type Stake_RoleGranted {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type Stake_RoleRevoked {
+  id: ID!
+  role: String!
+  account: String!
+  sender: String!
+}
+
+type Stake_Stake {
+  id: ID!
+  user: String!
+  event_id: BigInt!
+  amount: BigInt!
+  numWeeks: BigInt!
+}
+
+type Stake_Withdraw {
+  id: ID!
+  user: String!
+  event_id: BigInt!
+  amount: BigInt!
+}
+
